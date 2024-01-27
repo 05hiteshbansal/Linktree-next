@@ -1,0 +1,12 @@
+.activelinks{
+    background-color: var(--text);
+    color: var(--backGround);
+
+    }
+
+    .links{
+        display: flex;
+        flex-direction: row;
+        /* border-radius: 10px; */
+        padding: 10px;     
+    }

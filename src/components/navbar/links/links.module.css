@@ -1,0 +1,15 @@
+.links{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    /* max-width:min-content; */
+    /* max-height:min-content; */
+ 
+}
+.auth{
+    background-color: var(--text);
+    color: var(--backGround);
+    padding: 10px; 
+    border-radius: 5px;
+    }
+
