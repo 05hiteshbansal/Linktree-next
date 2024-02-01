@@ -25,3 +25,24 @@ body {
     text-wrap: balance;
   }
 }
+
+.container{
+  display: flex;
+   align-items: center;
+   justify-content: space-between;  
+   text-align: left
+   
+    /* min-w-full min-h-full */
+}
+
+.containerlayout{
+  min-width: 100vw;
+  margin: auto;
+  
+}
+
+.maincontent{
+  min-width: 100vw;
+  margin: auto;
+  text-align: center;
+}

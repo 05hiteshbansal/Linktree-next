@@ -3,7 +3,7 @@ import photo from '@/media/photo.png'
 export default function Home() {
   return (
     <>
-    <div className="flex items-center justify-between mt-5 min-w-full min-h-full">
+    <div className="container mx-5 gap-9 my-20">
       <div >
         {/* <div>
           <h1>A bloging website</h1>
