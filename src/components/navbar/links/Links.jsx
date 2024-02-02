@@ -1,9 +1,11 @@
-"use client";
 
-import React, { useState } from "react";
+import { authOption } from "@/app/api/auth/[...nextauth]/route";
+import { getServerSession } from "next-auth";
+import React from "react";
 import styles from "./links.module.css";
 import ActiveLink from "../activelink/ActiveLink";
-
+import Link from "next/link";
+import LogoutButton from "./LogoutButton";
 const link = [
   { path: "/", title: "Home" },
 
@@ -12,11 +14,12 @@ const link = [
   { path: "/contactus", title: "Contact Us" },
 ];
 
-const Links = () => {
-  const isAuth = true;
-  const isAdmin = true;
 
-  const [open, setOpen] = useState(true);
+
+
+const Links = async() => {
+  const session =await getServerSession(authOption)
+  const isAuth = session
 
   return (
     <div>
@@ -26,13 +29,13 @@ const Links = () => {
       ))}
       {isAuth ? (
         <>
-          {isAdmin && (
-            <ActiveLink path="/admin" title={"Admin"} key={"Admin"} />
-          )}
-          <button className={styles.auth}>Logout</button>
+          <ActiveLink path="/admin" title={`Hi! ${session.user.name}`} key={"user"} />
+          <LogoutButton/>
         </>
       ) : (
+        <Link href='/login'>
         <button className={styles.auth}>Login</button>
+        </Link>
       )}
     </div>
     
