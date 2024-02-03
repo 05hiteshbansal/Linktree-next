@@ -6,6 +6,10 @@
   --text:#C58940;
   --backGround:#FAEAB1;
 }
+*{
+  margin: 0%;
+  padding: 0%;
+}
 
 /* @media (prefers-color-scheme: dark) {
   :root {
@@ -17,7 +21,9 @@
 
 body {
   color: var(--text);
-  background-color:var(--backGround)
+  background-color:var(--backGround);
+  margin:0%;
+  padding: 0%;
 }
 
 @layer utilities {
@@ -42,7 +48,6 @@ body {
 }
 
 .maincontent{
-  min-width: 100vw;
   margin: auto;
   text-align: center;
 }

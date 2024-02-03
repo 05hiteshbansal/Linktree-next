@@ -1,5 +1,6 @@
 import Image from "next/image";
 import photo from '@/media/photo.png'
+import Form from "@/components/home_utility/homeForm/form";
 export default function Home() {
   return (
     <>
@@ -19,11 +20,7 @@ export default function Home() {
       <h1 className='text-5xl font-bold'> Get Pesonlized Link for Everything</h1>
         <p className='text-2xl'>A one webpage solution to all Social and Proffesional links at one place </p> 
       </div>
-<form className="flex flex-row items-center">
-  <span className='bg-white text-black py-3 ps-6'>linklist.to/</span>
-  <input type="text" placeholder="username"  className='py-3 text-black'/>
-  <button className='bg-emerald-600 px-5 py-3 text-black border-none select-none'>Sign in Free</button>
-</form>
+<Form/>
       </div>
 
 <Image src={photo} width={500} height={200}></Image>
