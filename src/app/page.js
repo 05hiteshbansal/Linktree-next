@@ -4,7 +4,7 @@ import Form from "@/components/home_utility/homeForm/form";
 export default function Home() {
   return (
     <>
-    <div className="container mx-5 gap-9 my-20">
+    <div className="container gap-9 my-20">
       <div >
         {/* <div>
           <h1>A bloging website</h1>

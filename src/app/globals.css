@@ -9,6 +9,7 @@
 *{
   margin: 0%;
   padding: 0%;
+  box-sizing: border-box;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -35,19 +36,21 @@ body {
 .container{
   display: flex;
    align-items: center;
-   justify-content: space-between;  
+   justify-content: space-evenly;  
    text-align: left
    
     /* min-w-full min-h-full */
 }
 
 .containerlayout{
-  min-width: 100vw;
-  margin: auto;
-  
+  max-width: 100vw;
+  max-height: 100vh;
 }
 
 .maincontent{
   margin: auto;
+  max-width: 100vw;
+  height: calc(100vh - 48px - 5px);
   text-align: center;
+  
 }
