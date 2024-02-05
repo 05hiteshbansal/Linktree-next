@@ -1,7 +1,9 @@
 import Image from "next/image";
 import photo from '@/media/photo.png'
 import Form from "@/components/home_utility/homeForm/form";
+import connect from "@/backend/dbConnection/db";
 export default function Home() {
+  connect()
   return (
     <>
     <div className="container gap-9 my-20">
