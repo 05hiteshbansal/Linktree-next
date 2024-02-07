@@ -3,7 +3,7 @@ import './globals.css'
 import Navbar from '@/components/navbar/navbar'
 import Footer from '@/components/footer/footer'
 import Provider from '@/components/providers/provider'
-
+import {ToastContainer} from '@/components/home_utility/toastify/Toastify';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -16,6 +16,7 @@ export default function RootLayout({ children }) {
     
     <html lang='eng'>
       <body className={inter.className}>
+      <ToastContainer position="top-left"/>
       <Provider>
       <div className='containerlayout'>
       <Navbar/>

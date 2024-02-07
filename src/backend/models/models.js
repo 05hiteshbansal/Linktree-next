@@ -9,11 +9,10 @@ const schema = new mongoose.Schema({
     min:1
   },
   email: {
-    type: String,
-    required: true,
+    type: String
   }
 
 } , {timestamp:true});
 
-export default  mongoose.models || mongoose.model("UserInfo" , schema);
+export default  mongoose.models.informations || mongoose.model("informations" , schema);
 
