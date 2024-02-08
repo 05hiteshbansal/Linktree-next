@@ -4,6 +4,7 @@ import Navbar from '@/components/navbar/navbar'
 import Footer from '@/components/footer/footer'
 import Provider from '@/components/providers/provider'
 import {ToastContainer} from '@/components/home_utility/toastify/Toastify';
+import  connect  from '@/backend/dbConnection/db'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
