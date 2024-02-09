@@ -19,7 +19,7 @@ redirect('/account?usernameTaken=1');
     } else {
      const data = await Username.create({ username: check , email:session.user.email });
      console.log(data);
-     redirect('/admin');
+     redirect(`/admin?id=${data._id}`);
      return JSON(data)
     }
 
