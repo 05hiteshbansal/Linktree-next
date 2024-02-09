@@ -21,7 +21,7 @@ else if(preferedlink.length>0){
     <>
     <form className="flex flex-row items-center" onSubmit={funsubmit}>
   <span className='bg-white text-black py-3 ps-6'>linklist.to/</span>
-  <input type="text" placeholder="username"  className='py-3 text-black'/>
+  <input type="text" placeholder="username"  className='py-3 text-black focus:border-slate-50'/>
   <button className='bg-emerald-600 px-5 py-3 text-black border-none select-none' type='submit'>Sign in Free</button>
 </form>
     </>
