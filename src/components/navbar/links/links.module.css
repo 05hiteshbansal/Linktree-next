@@ -7,9 +7,12 @@
  
 }
 .auth{
-    background-color: var(--text);
-    color: var(--backGround);
+    background-color: var(--backGround);
+    color: var(--text);
     padding: 10px; 
     border-radius: 5px;
     }
-
+.auth:hover{
+    background-color: var(--text);
+    color: var(--backGround);
+}

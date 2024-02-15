@@ -1,6 +1,6 @@
 import { getServerSession } from "next-auth";
 import React from "react";
-import { authOption } from "../api/auth/[...nextauth]/route";
+import { authOption } from "../../api/auth/[...nextauth]/route";
 import { redirect } from "next/navigation";
 import Form from "@/components/home_utility/usercheckForm/Form";
 const Account = async (req) => {

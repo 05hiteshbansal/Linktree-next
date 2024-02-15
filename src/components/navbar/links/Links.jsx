@@ -30,7 +30,7 @@ const Links = async() => {
       {isAuth ? (
         <>
           <ActiveLink path="/admin" title={`Hi! ${session.user.name}`} key={"user"} />
-          <LogoutButton/>
+          <LogoutButton width = {'100%'}/>
         </>
       ) : (
         <Link href='/login'>
