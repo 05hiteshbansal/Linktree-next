@@ -3,8 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {signIn} from "next-auth/react"
 import { faGoogle ,faGithub  } from '@fortawesome/free-brands-svg-icons'
 import React from 'react'
-import { redirect } from 'next/navigation'
-
 const googleFunc=()=>{
   signIn('google', { callbackUrl: '/' })
 }

@@ -10,10 +10,12 @@ export const metadata = {
 export default function HomeLayout({ children }) {
 
   return (
+    <div className="bodycontainer">
       <div className="containerlayout">
         <Navbar />
         <div className="maincontent">{children}</div>
         <Footer />
       </div>  
+      </div>
   );
 }

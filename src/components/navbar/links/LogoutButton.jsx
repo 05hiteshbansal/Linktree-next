@@ -7,7 +7,6 @@ const LogoutButton = ({width}) => {
 const logoutFunc=()=>{
   signOut({ callbackUrl: '/' });
 }
-
   return (
     <button className={styles.auth +` ${width}`} onClick={logoutFunc}>Logout</button>
   )

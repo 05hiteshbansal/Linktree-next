@@ -3,6 +3,7 @@ import Link from "next/link";
 import "@/app/globals.css";
 import { headers } from "next/headers";
 import ActiveLink from "@/components/navbar/activelink/ActiveLink";
+import Profilephoto from "@/components/home_utility/userPhoto/Profilephoto";
 
 export default function Homelayout({ children }) {
   const headerList = headers()
@@ -11,13 +12,14 @@ export default function Homelayout({ children }) {
     <>
       <div className="containerlayout">
         <div className="maincontent">
-          <div className=" flex flex-row h-full gap-5 ">
-            <div className="flex flex-col  w-1/5 pt-5 items-center mt-6 gap-5">
-            <ActiveLink path="/admin" title={'admin'} key={"admin"} className=' w-8/10' />
-            <ActiveLink path="/analytics" title={'analytics'} key={"analytics"}/>
+          <div className=" flex flex-row min-h-full gap-5 bg-slate-50 ">
+            <div className="flex flex-col  w-1/5 pt-5 items-center  gap-5 bg-slate-100 shadow-lg">
+            <Profilephoto width={150} height={150}/>
+            <ActiveLink path="/admin" title={'admin'} key={"admin"}  />
+            <ActiveLink path="/analytics" title={'analytics'} key={"analytics"} />
               <LogoutButton />
             </div>
-            <div>{children}</div>
+            <div className="w-full">{children}</div>
           </div>
         </div>
       </div>
