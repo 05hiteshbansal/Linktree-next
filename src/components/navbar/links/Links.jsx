@@ -6,6 +6,7 @@ import styles from "./links.module.css";
 import ActiveLink from "../activelink/ActiveLink";
 import Link from "next/link";
 import LogoutButton from "./LogoutButton";
+import Button from "../../darkMode/button"
 const link = [
   { path: "/", title: "Home" },
 
@@ -24,6 +25,7 @@ const Links = async() => {
   return (
     <div>
     <div className={styles.links}>
+    <Button/>
       {link.map((abs) => (
         <ActiveLink path={abs.path} title={abs.title} key={abs.path} />
       ))}

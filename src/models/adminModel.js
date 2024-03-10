@@ -1,16 +1,15 @@
 import mongoose, { Schema } from "mongoose";
 
 const schema = new Schema({
-  url: {
+  username: {
     type: String,
-    unique: true,
+     unique: true,
   },
   name: {
     type: String,
   },
   email: {
-    type: String,
-    unique: true,
+    type: String
   },
   urlimage: {
     type: String,
@@ -23,6 +22,15 @@ const schema = new Schema({
   },
   socialLinks:{
     type:Array
+  },
+  colour:{
+    type:String
+  },
+  imageurl:{
+    type:String
+  },
+  bgstate:{
+    type:String
   }
 }, {timestamp:true});
-export default  mongoose.models.userprofiles || mongoose.model("userprofiles" , schema);
+export default mongoose.models.userprofiles || mongoose.model("userprofiles" , schema);

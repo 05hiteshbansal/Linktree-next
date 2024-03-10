@@ -17,6 +17,7 @@ export default function Homelayout({ children }) {
             <Profilephoto width={150} height={150}/>
             <ActiveLink path="/admin" title={'admin'} key={"admin"}  />
             <ActiveLink path="/analytics" title={'analytics'} key={"analytics"} />
+            <ActiveLink path="/addLinks" title={'Add Links'} key={"links"} />
               <LogoutButton />
             </div>
             <div className="w-full">{children}</div>
