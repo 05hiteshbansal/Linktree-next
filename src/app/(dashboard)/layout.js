@@ -13,7 +13,7 @@ export default function Homelayout({ children }) {
       <div className="containerlayout">
         <div className="maincontent">
           <div className=" flex flex-row min-h-full gap-5 bg-slate-50 ">
-            <div className="flex flex-col  w-1/5 pt-5 items-center  gap-5 bg-slate-100 shadow-lg">
+            <div className="flex flex-col  w-1/5 pt-5 items-center  gap-5 bg-slate-100 shadow-lg ">
             <Profilephoto width={150} height={150}/>
             <ActiveLink path="/admin" title={'admin'} key={"admin"}  />
             <ActiveLink path="/analytics" title={'analytics'} key={"analytics"} />
