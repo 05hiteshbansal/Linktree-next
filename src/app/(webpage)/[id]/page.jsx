@@ -16,10 +16,12 @@ if(!page){
     <div className=" flex justify-center items-center text-center min-h-screen" style={page.bgstate==='colour' ?{backgroundColor:page.colour} : {backgroundImage:`url(${page.imageurl})`}}>
     <div className=' kk flex flex-col justify-center items-center rounded-xl gap-10 lg:w-1/2 md:w-full' >
     <div className=' my-5'>
-    <Image src="https://i.pravatar.cc/150?u=a04258114e29026708c" width={150} height={150} alt='image' className=" rounded-full" />
+    <Image src={page.profileimage} width={150} height={150} alt='image' className=" rounded-full" />
     </div>
-    <div className=' font-serif text-lg text-white font-medium'>
-      <h2>@ {page.name} #{page.username}</h2>
+    
+    <div className='font-serif text-lg text-white font-medium flex flex-col gap-3'>
+    <h2>#{page.username}</h2>
+      <h2>@ {page.name}</h2>
       <h2> Bio 🤓 : {page.bio} </h2>
       <h2> Location 🔎 : {page.location} </h2>
     </div>

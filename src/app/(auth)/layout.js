@@ -7,7 +7,7 @@ export default function authLayout({ children }) {
 
   return (
       <div className="containerlayout">
-        <div className="maincontent">{children}</div>
+        <div className="maincontent ">{children}</div>
       </div>  
   );
 }

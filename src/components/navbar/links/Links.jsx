@@ -9,10 +9,7 @@ import LogoutButton from "./LogoutButton";
 import Button from "../../darkMode/button"
 const link = [
   { path: "/", title: "Home" },
-
-  { path: "/Priceing", title: "Priceing" },
-
-  { path: "/contactus", title: "Contact Us" },
+ { path: "/contactus", title: "Contact Us" },
 ];
 
 

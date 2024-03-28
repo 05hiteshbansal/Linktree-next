@@ -11,7 +11,7 @@ const schema = new Schema({
   email: {
     type: String
   },
-  urlimage: {
+  profileimage: {
     type: String,
   },
   bio: {

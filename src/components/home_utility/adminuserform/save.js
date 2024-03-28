@@ -6,9 +6,9 @@ import User from "@/models/adminModel"
 export default async function save(formdata){
     const session = await getServerSession(authOption);
     const email = session.user.email
-    const userData = formdata
+    const userData = {...formdata , "profileimage":session.user.image}
 console.log(userData);
     const data = await User.findOne({email:email})
-    const updatedData=await User.findByIdAndUpdate(data._id , userData)
+    const updatedData = await User.findByIdAndUpdate(data._id , userData)
      console.log( updatedData) 
     }

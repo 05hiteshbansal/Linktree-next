@@ -39,24 +39,7 @@ const Toggle = ({ profileimage, userData }) => {
           height={150}
           alt="click to change"
         >    
-        </Image>
-      
-      
-
-            <div className="file-input rounded-full bg-red-600 relative w-0">
-              <input
-                type="file"
-                id="file"
-                accept="image/*"
-                 className=" hidden"
-                // onChange={upload}
-              />
-              <label htmlFor="file" className="cursor-pointer ">
-              <FontAwesomeIcon icon={faUpload} />
-              </label>
-            </div>
-        
-
+        </Image>   
       </div>
       <div className="w-3/5 bg-white rounded-lg">
         <Form

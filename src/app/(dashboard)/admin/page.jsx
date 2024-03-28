@@ -1,10 +1,9 @@
 import React from "react";
 import Username from "@/models/adminModel";
 import { getServerSession } from "next-auth";
-import { redirect } from "next/navigation";
+import {redirect} from "next/navigation";
 import { authOption } from "../../api/auth/[...nextauth]/route";
 import Toggle from "@/components/dashboard/profile/toggle";
-
 const Admin = async (req) => {
   const session = await getServerSession(authOption);
   // console.log(session);
