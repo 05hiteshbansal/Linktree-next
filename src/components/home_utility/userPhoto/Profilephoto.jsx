@@ -6,7 +6,7 @@ import Image from 'next/image';
 const Profilephoto = async({width , height}) => {
     const session = await getServerSession(authOption);
   return (
-    <div><Image src={session.user.image} width={width} height={height} className=" rounded-full" /></div>
+    <div><Image src={session.user.image} width={width} height={height} alt='image' className=" rounded-full" /></div>
   )
 }
 export default Profilephoto

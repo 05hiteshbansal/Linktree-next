@@ -42,7 +42,7 @@ const page = ({linklist}) => {
                 variant="ghost"
                 className="w-1/5"
                 onClick={()=>savelinks(links)}
-              >
+            >
                 Save order
               </Button>
         </div>

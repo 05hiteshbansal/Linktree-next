@@ -17,6 +17,7 @@ const schema = new Schema({
   bio: {
     type: String,
   },
+  
   location: {
     type: String,
   },
