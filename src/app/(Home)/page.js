@@ -2,9 +2,6 @@
 import Image from "next/image";
 import photo from '@/media/photo.png'
 import Form from "@/components/home_utility/homeForm/form";
-// import gsap from "gsap";
-// import { useGSAP } from "@gsap/react";
-// import { useRef } from "react";
 export default function Home() {
  
   return (

@@ -1,7 +1,6 @@
 import LogoutButton from "@/components/navbar/links/LogoutButton";
 import Link from "next/link";
 import "@/app/globals.css";
-import { headers } from "next/headers";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import ActiveLink from "@/components/navbar/activelink/ActiveLink";
