@@ -5,7 +5,7 @@ import Form from "@/components/home_utility/LinkForms/Form";
 import { ReactSortable } from "react-sortablejs";
 import {savelinks } from '@/components/dashboard/savelinks/savelinks'
 
-const page = ({linklist}) => {
+const Page = ({linklist}) => {
   const [links, setlinks] = useState(linklist);
   // const [newdata, setnewdata] = useState({});
   //Authenticate(req)
@@ -51,4 +51,4 @@ const page = ({linklist}) => {
   );
 };
 
-export default page;
+export default Page;

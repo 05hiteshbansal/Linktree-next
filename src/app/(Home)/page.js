@@ -18,7 +18,7 @@ export default function Home() {
             <Form/>
       </div>
 
-<Image src={photo} width={500} height={200}></Image>
+<Image src={photo} width={500} height={200} alt="homeimg"></Image>
 </div>
     </>
   )

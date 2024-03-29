@@ -10,7 +10,7 @@ const Navbar = () => {
         <div className={style.logo}>
           <Link href='/'>
           <div className='flex flex-row gap-2 items-center'>
-          <Image src={logo} className='h-12 w-12 fill-green-500'></Image>
+          <Image src={logo} className='h-12 w-12 fill-green-500' alt='Logo'></Image>
             <div>LinkTree</div>
         </div>
             </Link>
