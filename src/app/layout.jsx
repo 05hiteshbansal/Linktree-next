@@ -1,8 +1,8 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Provider from "@/components/providers/provider";
-import connect from "@/backend/dbConnection/db";
-import Uiprovider from "@/components/providers/uiprovider";
+import Provider from "../components/providers/provider";
+import connect from "../backend/dbConnection/db";
+import Uiprovider from "../components/providers/uiprovider";
 const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "LinkTree ",
