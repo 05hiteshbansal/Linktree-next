@@ -7,7 +7,7 @@ const session = await getServerSession(authOption);
 const Handlesubmit = async (e) => {
   "use server";
   const check = e.get("username");
-  console.log(check, "ooo");
+  console.log(check, "ooo"); 
   const found = await Username.findOne({ username: check });
   console.log(found);
 
