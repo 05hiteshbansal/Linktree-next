@@ -1,10 +1,11 @@
+"use server"
 import { getServerSession } from "next-auth";
 import React from "react";
 import { authOption } from "../../api/auth/[...nextauth]/route";
 import { redirect } from "next/navigation";
 import Form from "@/components/home_utility/usercheckForm/Form";
 import User from "@/models/adminModel"
-const Account = async (req) => {
+const Account = async({searchParams}) => {
   const session = await getServerSession(authOption);
   const user = await User.findOne({email:session.user.email})
  console.log(user)
@@ -12,8 +13,9 @@ const Account = async (req) => {
   {
     redirect("/admin");
   }
-  const desiredlink = req.searchParams.link;
-  const usernameTaken = req.searchParams.usernameTaken
+  const desiredlink = searchParams.link;
+  const usernameTaken = searchParams.usernameTaken
+  // console.log(desiredlink)
   if (!session) 
   {
     redirect("/");

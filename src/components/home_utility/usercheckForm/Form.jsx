@@ -1,3 +1,4 @@
+"use server"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHandPointer } from "@fortawesome/free-solid-svg-icons";
 import Handlesubmit from "./handleSubmit";
@@ -5,7 +6,7 @@ const Form = async({desiredlink}) => {
   return (
     <>
      <form
-            className="flex flex-col items-center  gap-8 mt-20"
+            className="flex flex-col items-center gap-8 mt-20"
             action={Handlesubmit}
           >
             <input
