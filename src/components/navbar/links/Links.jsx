@@ -6,7 +6,7 @@ import styles from "./links.module.css";
 import ActiveLink from "../activelink/ActiveLink";
 import Link from "next/link";
 import LogoutButton from "./LogoutButton";
-import Button from "../../darkMode/button"
+import Button from "@/components/darkMode/Button"
 const link = [
   { path: "/", title: "Home" },
  { path: "/contactus", title: "Contact Us" },
