@@ -1,4 +1,3 @@
-import {Cloudinary} from "@cloudinary/url-gen";
 export default async function fileupload(e) {
   const file = e.target.files[0];
   console.log(file);

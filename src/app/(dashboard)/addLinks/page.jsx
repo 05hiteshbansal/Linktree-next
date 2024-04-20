@@ -1,3 +1,4 @@
+
 import { getServerSession } from "next-auth";
 import React from "react";
 import { authOption } from "../../api/auth/[...nextauth]/route";
@@ -6,6 +7,7 @@ import MainForm from "@/components/home_utility/LinkForms/mainForm"
 import User from "@/models/adminModel"
 const page = async() => {
   const session = await getServerSession(authOption);
+  console.log(session)
   if (!session) {
     redirect("/");
   }

@@ -12,15 +12,13 @@ const Handlesubmit = async (e) => {
   console.log(found);
 
   if (found) {
-    console.log(JSON.stringify(found));
-    return redirect("/account?usernameTaken=1");
+    return redirect("/account");
   } else {
-    const data = await Username.create({
+    const data = await Username.save({
       username: check,
-      email: session.user.email,
     });
     console.log(data);
-    return redirect(`/admin?id=${data._id}`);
+     redirect(`/admin?id=${data._id}`);
   }
 };
 

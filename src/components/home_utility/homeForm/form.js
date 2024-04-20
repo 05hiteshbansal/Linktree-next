@@ -9,7 +9,7 @@ const funsubmit=(e)=>{
     e.preventDefault();
    let preferedlink=e.target[0].value
 if(preferedlink.length>0 && data){
-router.push(`/account?link=${preferedlink}&free=true`);
+router.push(`/account`);
 }
 else if(preferedlink.length>0){
     router.push('/login');

@@ -3,8 +3,6 @@ import React, { useState } from "react";
 import ToggleButton from "./togglebutton/togglebutton";
 import Image from "next/image";
 import Form from "@/components/home_utility/adminuserform/Form";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faUpload } from '@fortawesome/free-solid-svg-icons'
 const Toggle = ({ profileimage, userData }) => {
   const [bgimage, setbgimage] = useState(userData.bgstate);
   const [color, setcolor] = useState(userData.colour);

@@ -5,16 +5,17 @@ import { authOption } from "../../api/auth/[...nextauth]/route";
 import { redirect } from "next/navigation";
 import Form from "@/components/home_utility/usercheckForm/Form";
 import User from "@/models/adminModel"
-const Account = async({searchParams}) => {
+import connect from "@/backend/dbConnection/db";
+const Account = async() => {
+ await connect()
   const session = await getServerSession(authOption);
+  console.log(session, 3333)
   const user = await User.findOne({email:session.user.email})
- console.log(user)
+  console.log(user)
    if(user.username)
   {
     redirect("/admin");
-  }
-  const desiredlink = searchParams.link;
-  const usernameTaken = searchParams.usernameTaken
+  } 
   // console.log(desiredlink)
   if (!session) 
   {
@@ -25,10 +26,7 @@ const Account = async({searchParams}) => {
       <div className="flex flex-col mt-20">
         <div className="text-5xl font-bold">Claim Your Free LinkTree !!!</div>
         <div>
-         <Form  desiredlink={desiredlink} />
-         {usernameTaken && (<>
-         <div className="text-md text-red-500" > * Username already taken</div>
-         </>)}
+         <Form userdata={user.email}/>
         </div>
       </div>
     </>
