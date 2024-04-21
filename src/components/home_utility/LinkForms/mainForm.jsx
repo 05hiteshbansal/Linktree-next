@@ -6,7 +6,7 @@ import { ReactSortable } from "react-sortablejs";
 import {savelinks } from '@/components/dashboard/savelinks/savelinks'
 
 const Page = ({linklist}) => {
-  console.log(linklist)
+  //console.log(linklist)
   const [links, setlinks] = useState(linklist);
   // const [newdata, setnewdata] = useState({});
   //Authenticate(req)
@@ -24,7 +24,7 @@ const Page = ({linklist}) => {
     <div>
        <div>
         <div className=" flex flex-row justify-between py-4">
-          <div>Add Links to Share</div>
+          <div className=" font-serif font-semibold text-xl">Add Links to Share</div>
           <div>
             <Button onClick={increase}>Add Link</Button>
           </div>

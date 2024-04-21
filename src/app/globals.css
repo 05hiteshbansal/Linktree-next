@@ -9,15 +9,16 @@
 }
 :root {
   --text:#C58940;
+  /* --backGround:#FAEAB1; */
   --backGround:#FAEAB1;
 }
 
-/* @media (prefers-color-scheme: dark) {
+ @media (prefers-color-scheme: dark) {
   :root {
-    --text: #fff ;
-    --backGround: #000;
+    --text: #9b6c32 ;
+    --backGround: #fce17d;
   }
-} */
+} 
 
 
 .bodycontainer{

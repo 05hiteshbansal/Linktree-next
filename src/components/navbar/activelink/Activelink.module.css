@@ -1,6 +1,9 @@
 .activelinks{
-    color: gold;
-
+    color: #211951;
+    width: 80%;
+    background-color:#B5C0D0;
+    justify-content: center;
+    border-radius: 10px;
     }
 
     .links{

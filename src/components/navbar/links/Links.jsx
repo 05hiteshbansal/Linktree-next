@@ -11,10 +11,6 @@ const link = [
   { path: "/", title: "Home" },
  { path: "/contactus", title: "Contact Us" },
 ];
-
-
-
-
 const Links = async() => {
   const session =await getServerSession(authOption)
   const isAuth = session
