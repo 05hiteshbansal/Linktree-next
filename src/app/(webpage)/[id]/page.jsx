@@ -15,7 +15,10 @@ if(!page){
   redirect('/')
 }
   return (
-    <div className=" flex justify-center items-center text-center min-h-screen" style={page.bgstate==='colour' ?{backgroundColor:page.colour} : {backgroundImage:`url(${page.imageurl})`}}>
+    <div className=" flex justify-center items-center text-center min-h-screen" style={page.bgstate==='colour' ?{backgroundColor:page.colour} : {backgroundImage:`url(${page.imageurl})` ,height: "inherit",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover"}}>
     <div className=' kk flex flex-col justify-center items-center rounded-xl gap-10 lg:w-1/2 md:w-full' >
     <div className=' my-5'>
     <Image src={page.profileimage} width={150} height={150} alt='image' className=" rounded-full" />
