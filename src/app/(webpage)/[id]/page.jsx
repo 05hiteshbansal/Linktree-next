@@ -4,7 +4,9 @@ import "../style.css"
 import Link from 'next/link';
 import Image from 'next/image';
 import User from "@/models/adminModel";
+import connect from '@/backend/dbConnection/db';
 const Page = async({params}) => {
+  connect()
 const uri=params.id
 console.log(uri, "123")
 const page = await User.findOne({username:uri});
