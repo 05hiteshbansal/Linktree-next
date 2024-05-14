@@ -1,6 +1,8 @@
 .links{
     display: flex;
     flex-direction: row;
+    justify-items: center;
+    align-items: center;
     gap: 5px;
     /* max-width:min-content; */
     /* max-height:min-content; */

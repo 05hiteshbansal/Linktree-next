@@ -6,9 +6,11 @@ import styles from "./Activelink.module.css"
 const ActiveLink = (abs) => {
     const currentPath=usePathname();
   return (
-    <Link href={abs.path} className={` ${styles.links} ${currentPath==abs.path && currentPath!='/' && styles.activelinks}`}  >
+    <div className='w-full h-hull flex justify-center items-center text-center'>
+    <Link href={abs.path} className={` flex justify-center items-center w-full m-2 ${currentPath==abs.path && currentPath!='/' && styles.activelinks}`}  >
           {abs.title}
     </Link>
+    </div>
   )
 }
 

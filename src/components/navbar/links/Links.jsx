@@ -16,7 +16,7 @@ const Links = async() => {
   const isAuth = session
 
   return (
-    <div>
+    
     <div className={styles.links}>
     <Button/>
       {link.map((abs) => (
@@ -34,7 +34,6 @@ const Links = async() => {
       )}
     </div>
     
-    </div>
   );
 };
 
