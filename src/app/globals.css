@@ -12,12 +12,9 @@
   /* --backGround:#FAEAB1; */
   --backGround:#FAEAB1;
 }
-
- @media (prefers-color-scheme: dark) {
-  :root {
+.dark1 {
     --text: #9b6c32 ;
     --backGround: #fce17d;
-  }
 } 
 
 
