@@ -6,9 +6,9 @@ import { faCannabis } from '@fortawesome/free-solid-svg-icons'
 
 const Footer = () => {
   return (
-    <div>
+    <div className=' bg-slate-100 mt-3'>
 
-<footer className="text-gray-600 body-font">
+<footer className="text-gray-600 body-font ">
   <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
   <div className={style.logo}>
           <Link href='/'>

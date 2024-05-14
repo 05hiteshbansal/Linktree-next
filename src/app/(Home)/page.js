@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
     
-    <div className="gap-9 my-20 flex flex-col lg:flex-row items-center justify-center ">
+    <div className="gap-9 mt:20 lg:mb-20 flex flex-col lg:flex-row items-center justify-center min-h-[65vh] ">
       <div>
       <div className='flex-col flex gap-3 mb-8 max-w-lg mt-8'>
       <h1 className='text-5xl font-bold'> Get Pesonlized Link for Everything</h1>

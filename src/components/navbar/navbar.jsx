@@ -1,12 +1,14 @@
-import React from 'react'
+
+//import React, { useState } from 'react'
 import Links from './links/Links'
 import style from './navbar.module.css'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCannabis } from '@fortawesome/free-solid-svg-icons'
+
 const Navbar = () => {
   return (
-    <div className={style.container}>
+     <div className=" flex flex-col md:flex-row bg-inherit justify-between items-center px-5 py-5 pt-1" >
         <div className={style.logo}>
           <Link href='/'>
           <div className='flex flex-row gap-2 items-center'>
@@ -16,7 +18,10 @@ const Navbar = () => {
         </div>
             </Link>
         </div>
-            <Links/>
+        {/* {
+(control)?
+        } */}
+        <Links/>
     </div>
   )
 }
