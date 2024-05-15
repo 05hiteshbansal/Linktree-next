@@ -22,13 +22,15 @@ export const authOption={
   },
   
  callbacks: {
-    async signIn({ user, account, profile, email, credentials }) {
+    async signIn({ user, account, profile}) {
       connect()
+      console.log(user, account, profile)
       if(account.provider=="github"){
             try {
               const userfind= await User.findOne({email:user.email});
               if(!userfind){
                 await User.create({email:user.email})
+                
                 await user.save();
                 return true
               }

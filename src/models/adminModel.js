@@ -25,13 +25,16 @@ const schema = new Schema({
     type:Array
   },
   colour:{
-    type:String
+    type:String,
+    default:"#240750"
   },
   imageurl:{
     type:String
   },
   bgstate:{
-    type:String
+    type:String,
+    default:"colour"
   }
 }, {timestamp:true});
+
 export default mongoose.models.userprofiles || mongoose.model("userprofiles" , schema);

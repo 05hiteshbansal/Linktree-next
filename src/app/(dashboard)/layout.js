@@ -37,7 +37,7 @@ export default async function Homelayout({ children }) {
             <ActiveLink path="/addLinks" title={'Add Links'} key={"links"} />
               <LogoutButton />
             </div>
-            <div className="w-full">{children}</div>
+            <div className="w-full min-h-[100vh]">{children}</div>
           </div>
         </div>
       </div>

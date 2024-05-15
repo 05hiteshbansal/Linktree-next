@@ -8,6 +8,7 @@ import User from "@/models/adminModel"
 import connect from "@/backend/dbConnection/db";
 const Account = async() => {
  await connect()
+ 
   const session = await getServerSession(authOption);
   console.log(session, 3333)
   const user = await User.findOne({email:session.user.email})
@@ -23,7 +24,7 @@ const Account = async() => {
   }
   return (
     <>
-      <div className="flex flex-col mt-20">
+      <div className="flex flex-col mt-20 min-h-[61.5vh]">
         <div className="text-5xl font-bold">Claim Your Free LinkTree !!!</div>
         <div>
          <Form userdata={user.email}/>

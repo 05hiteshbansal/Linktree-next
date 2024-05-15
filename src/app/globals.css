@@ -11,10 +11,14 @@
   --text:#C58940;
   /* --backGround:#FAEAB1; */
   --backGround:#FAEAB1;
+  --layoutback:#f8fafc;
+  --layoutback2:#f1f5f9;
 }
 .dark1 {
     --text: #9b6c32 ;
     --backGround: #fce17d;
+    --layoutback:#222831;
+    --layoutback2:#31363F;
 } 
 
 
