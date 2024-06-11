@@ -4,6 +4,7 @@ import { faHandPointer } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import {Toaster, toast} from 'react-hot-toast';
 import { useRouter } from 'next/navigation'
+import { Toaster } from "@/components/ui/toaster"
 const Form =({userdata}) => {
   const router = useRouter()
 const Handlesubmit = async (e) => {

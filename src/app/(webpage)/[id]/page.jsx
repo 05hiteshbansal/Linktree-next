@@ -1,51 +1,71 @@
-import { redirect } from 'next/navigation';
+import { redirect } from "next/navigation";
 //import {Avatar} from "@nextui-org/react";
-import "../style.css"
-import Link from 'next/link';
-import Image from 'next/image';
+import "../style.css";
+import Link from "next/link";
+import Image from "next/image";
 import User from "@/models/adminModel";
-import connect from '@/backend/dbConnection/db';
-const Page = async({params}) => {
-  connect()
-const uri=params.id
-console.log(uri, "123")
-const page = await User.findOne({username:uri});
-console.log(page, "pppp")
-if(!page){
-  redirect('/')
-}
+import connect from "@/backend/dbConnection/db";
+const Page = async ({ params }) => {
+  connect();
+  const uri = params.id;
+  console.log(uri, "123");
+  const page = await User.findOne({ username: uri });
+  console.log(page, "pppp");
+  if (!page) {
+    redirect("/");
+  }
   return (
-    <div className=" flex justify-center items-center text-center min-h-screen" style={page.bgstate==='colour' ?{backgroundColor:page.colour} : {backgroundImage:`url(${page.imageurl})` ,height: "inherit",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover"}}>
-    <div className=' kk flex flex-col justify-center items-center rounded-xl gap-10 lg:w-1/2 md:w-full' >
-    <div className=' my-5'>
-    <Image src={page.profileimage} width={150} height={150} alt='image' className=" rounded-full" />
-    </div>
-    
-    <div className='font-serif text-lg text-white font-medium flex flex-col gap-3'>
-    <h2>#{page.username}</h2>
-      <h2>@ {page.name}</h2>
-      <h2> Bio 🤓 : {page.bio} </h2>
-      <h2> Location 🔎 : {page.location} </h2>
-    </div>
-    <div className='w-full flex items-center flex-col'>
-      {page.socialLinks.map((data,index)=>(
-        <div  className='font-serif text-lg my-4 w-3/5 py-2 rounded-3xl border-white border-4 text-white hover:text-black hover:bg-[#fff] ' key={index}>
-                <Link target="_blank" className='w-full' href={data.link} >{data.title}</Link>
+    <div
+      className=" flex justify-center items-center text-center min-h-screen"
+      style={
+        page.bgstate === "colour"
+          ? { backgroundColor: page.colour }
+          : {
+              backgroundImage: `url(${page.imageurl})`,
+              height: "inherit",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+            }
+      }
+    >
+      <div className=" kk flex flex-col justify-center items-center rounded-xl gap-10 lg:w-1/2 md:w-full">
+        <div className=" my-5">
+          <Image
+            src={page.profileimage}
+            width={150}
+            height={150}
+            alt="image"
+            className=" rounded-full"
+          />
         </div>
-      ))}
+
+        <div className="font-serif text-lg text-white font-medium flex flex-col gap-3">
+          <h2>#{page.username}</h2>
+          <h2>@ {page.name}</h2>
+          <h2> Bio 🤓 : {page.bio} </h2>
+          <h2> Location 🔎 : {page.location} </h2>
+        </div>
+        <div className="w-full flex items-center flex-col">
+          {page.socialLinks.map((data, index) => (
+            <div className="w-full h-full">
+              <Link target="_blank" className=" flex items-center justify-center" href={data.link}>
+                <div
+                  className="font-serif text-lg my-4 w-3/5 py-2 rounded-3xl border-white border-4 text-white hover:text-black hover:bg-[#fff] "
+                  key={index}
+                >
+                  {data.title}
+                </div>
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
-    </div>
-    </div>
-  )
-}
+  );
+};
 
-export default Page
-
-
-
+export default Page;
 
 // {
 //   _id: new ObjectId('65e9c2923dc8278f2b3f4f2b'),
