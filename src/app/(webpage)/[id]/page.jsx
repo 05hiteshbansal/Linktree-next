@@ -5,15 +5,17 @@ import Link from "next/link";
 import Image from "next/image";
 import User from "@/models/adminModel";
 import connect from "@/backend/dbConnection/db";
-const Page = async ({ params }) => {
-  connect();
-  const uri = params.id;
-  console.log(uri, "123");
-  const page = await User.findOne({ username: uri });
-  console.log(page, "pppp");
-  if (!page) {
-    redirect("/");
-  }
+
+import Share from "@/components/providers/Share";
+const Page =  async({ params }) => {
+connect();
+const uri = params.id;
+console.log(uri, "123");
+const page = await User.findOne({ username: uri });
+console.log(page, "pppp");
+if (!page) {
+  redirect("/");
+}
   return (
     <div
       className=" flex justify-center items-center text-center min-h-screen"
@@ -29,8 +31,10 @@ const Page = async ({ params }) => {
             }
       }
     >
-      <div className=" kk flex flex-col justify-center items-center rounded-xl gap-10 lg:w-1/2 md:w-full">
-        <div className=" my-5">
+      <div className=" kk flex flex-col justify-center items-center rounded-xl gap-10 lg:w-1/2 md:w-full relative">
+        <div className=" my-5 flex flex-row">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+         
           <Image
             src={page.profileimage}
             width={150}
@@ -38,6 +42,9 @@ const Page = async ({ params }) => {
             alt="image"
             className=" rounded-full"
           />
+          <div>
+         <Share url={uri}/>
+          </div>
         </div>
 
         <div className="font-serif text-lg text-white font-medium flex flex-col gap-3">
