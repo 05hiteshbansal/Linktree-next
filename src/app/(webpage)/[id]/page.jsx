@@ -55,11 +55,10 @@ if (!page) {
         </div>
         <div className="w-full flex items-center flex-col">
           {page.socialLinks.map((data, index) => (
-            <div className="w-full h-full">
+            <div key={index} className="w-full h-full">
               <Link target="_blank" className=" flex items-center justify-center" href={data.link}>
                 <div
                   className="font-serif text-lg my-4 w-3/5 py-2 rounded-3xl border-white border-4 text-white hover:text-black hover:bg-[#fff] "
-                  key={index}
                 >
                   {data.title}
                 </div>
